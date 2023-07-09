@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bud</title>
+    <script src="./app.js" defer></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 16px;
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 70%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1{
+            font-size: 23px;
+            padding: 5px 11px;
+            text-align: center;
+        }
+        input{
+            width: 70%;
+        }
+        form > button{
+            width: 80px;
+            background-color: blue;
+        }
+        .d-flex{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        ul {
+            list-style: none;
+        }
+        span{
+            font-size: 20px;
+            display: list-item;
+            box-shadow: 0px 0px 7px 1.6px;
+            border-radius: 10px;
+            padding: 10px 11px;
+            width: 83%;
+            margin: 8px auto;
+        }
+        li{
+            text-align: center;
+        }
+        .buttons{
+            display: inline-block;
+            margin: 6px 5px 3px 5px;
+            height: 32px;
+            border-radius: 10px;
+            width: 70px;
+        }
+        div.container > div{
+            text-align: center;
+            margin-top: 9px;
+            padding: 2px 0px;
+        }
+        div.container >div >button{
+            background-color: unset;
+            color: rgb(233 37 37);
+            width: auto;
+            font-weight: 600;
+        }
+        .utility-class{
+            height: 45px;
+            margin: 4px 6px;
+            padding: 5px 4px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grocery Bud</h1>
+        <form class="d-flex">
+            <input id="list-item-value" class="utility-class" type="text" placeholder="Enter Grocery Name Here" required>
+            <button id="submit"  class="utility-class" type="submit">Add Item</button>
+        </form>
+        <ul id="grocery-list"></ul>
+        <div><button class="utility-class" onclick="delItems()">delete all</button></div>
+    </div>
+</body>
+</html>
